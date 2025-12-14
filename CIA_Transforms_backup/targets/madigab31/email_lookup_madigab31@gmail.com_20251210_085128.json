@@ -1,0 +1,17 @@
+== EMAIL LOOKUP FOR madigab31@gmail.com ==
+
+[HIBP]
+{"error":"HIBP request failed","http_code":"401"}
+
+[HUNTER]
+{
+  "errors": [
+    {
+      "id": "authentication_failed",
+      "code": 401,
+      "details": "No user found for the API key supplied"
+    }
+  ]
+}
+[EMAILREP]
+{"status": "fail", "reason": "invalid api key"}

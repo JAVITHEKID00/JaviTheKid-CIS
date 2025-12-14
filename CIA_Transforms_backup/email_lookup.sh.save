@@ -1,0 +1,15 @@
+###############################
+# 3) EMAILREP.IO – Reputation
+###############################
+echo -e "\n\n[EMAILREP]\n" >> "$OUT_FILE"
+
+if [[ -n "${EMAILREP_KEY:-}" ]]; then
+  curl -s \
+    -H "Key: ${EMAILREP_KEY}" \
+    -H "User-Agent: JaviTheKid-CIA" \
+    "https://emailrep.io/${TARGET}" \
+    >> "$OUT_FILE" \
+    || echo '{ "error": "EmailRep request failed" }' >> "$OUT_FILE"
+else
+  echo '{ "info": "EMAILREP_KEY not configured. Skipping EmailRep lookup." }' >> "$OUT_FILE"
+fi
