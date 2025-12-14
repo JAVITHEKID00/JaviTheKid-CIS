@@ -40,7 +40,7 @@ import sys
 
 import requests
 
-ip = "${IP}"
+ip = os.environ.get("IP") or ""
 try:
     ipaddress.ip_address(ip)
 except ValueError:
